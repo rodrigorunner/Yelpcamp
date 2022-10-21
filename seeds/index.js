@@ -20,4 +20,6 @@ const seedDB = async () => {
       camp.save()
    }
 }
-seedDB()
+seedDB().then(() => {
+   mongoose.connection.close()
+})
